@@ -1,4 +1,4 @@
-package com.gmail.huashadow.study.concurrent;
+package com.gmail.huashadow.study.concurrency;
 
 /**
  * Created by wolf on 2017/3/11.
