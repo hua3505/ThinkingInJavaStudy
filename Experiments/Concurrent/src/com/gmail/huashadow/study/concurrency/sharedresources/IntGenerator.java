@@ -12,7 +12,7 @@ public abstract class IntGenerator {
         mCanceled = true;
     }
 
-    public boolean ismCanceled() {
+    public boolean isCanceled() {
         return mCanceled;
     }
 }
