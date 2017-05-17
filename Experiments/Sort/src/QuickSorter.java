@@ -11,27 +11,20 @@ public class QuickSorter implements Sorter {
         }
         int i = start;
         int j = end;
-        int k = start;
+        T divider = array[start];
         while (i < j) {
-            if (k == i) {
-                if (comparator.compare(array[k], array[j]) > 0) {
-                    swap(array, k, j);
-                    k = j;
-                } else {
-                    j--;
-                }
-            } else if (k == j) {
-                if (comparator.compare(array[k], array[i]) < 0) {
-                    swap(array, k, i);
-                    k = i;
-                } else {
-                    i++;
-                }
+            while ((i < j) && comparator.compare(divider, array[j]) <= 0) {
+                j--;
             }
+            array[i] = array[j];
+            while ((i < j) && comparator.compare(divider, array[i]) >= 0) {
+                i++;
+            }
+            array[j] = array[i];
         }
-        sort(array, start, k, comparator);
-
-        sort(array, k+1, end, comparator);
+        array[i] = divider;
+        sort(array, start, i, comparator);
+        sort(array, i+1, end, comparator);
     }
 
     private <T> void swap(T[] array, int i, int j) {
