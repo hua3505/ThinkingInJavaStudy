@@ -23,7 +23,7 @@ public class QuickSorter implements Sorter {
             array[j] = array[i];
         }
         array[i] = divider;
-        sort(array, start, i, comparator);
+        sort(array, start, i-1, comparator);
         sort(array, i+1, end, comparator);
     }
 
