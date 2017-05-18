@@ -27,12 +27,6 @@ public class QuickSorter implements Sorter {
         sort(array, i+1, end, comparator);
     }
 
-    private <T> void swap(T[] array, int i, int j) {
-        T tmp = array[j];
-        array[j] = array[i];
-        array[i] = tmp;
-    }
-
     @Override
     public <T> void sort(T[] array, Comparator comparator) {
         sort(array, 0, array.length - 1, comparator);
