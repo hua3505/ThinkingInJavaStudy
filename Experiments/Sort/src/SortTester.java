@@ -10,7 +10,7 @@ public class SortTester {
         test(new QuickSorter());
     }
 
-    private static void test(Sorter sorter) {
+    public static void test(Sorter sorter) {
         Integer[] a = {1, 23, 1233, 0, -9, 32, 23, 5, 5, 67};
         sorter.sort(a, Comparator.naturalOrder());
         System.out.println(Arrays.toString(a));

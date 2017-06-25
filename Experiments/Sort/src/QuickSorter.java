@@ -5,7 +5,7 @@ import java.util.Comparator;
  * 快速排序
  */
 public class QuickSorter implements Sorter {
-    public <T> void sort(T[] array, int start, int end, Comparator comparator) {
+    private <T> void sort(T[] array, int start, int end, Comparator comparator) {
         if (start >= end) {
             return;
         }
